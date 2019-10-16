@@ -1,0 +1,300 @@
+@import'common.scss';
+@import'myscss.scss';
+* {
+    @include sizing;
+    text-decoration: none;
+}
+
+.wrap {
+    @include num(100%, 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    @include num(100%, pr(45px));
+    @include flex;
+    padding: 0 pr(10px);
+    div {
+        @include flex;
+        img {
+            @include num(auto, pr(22px));
+        }
+        span {
+            font-size: pr(18px);
+            @include flex(flex-start);
+            margin-left: pr(5px);
+            .icon {
+                font-size: pr(14px);
+            }
+        }
+    }
+    form {
+        @include num(pr(334px/2), pr(33px));
+        border: 1px solid #ccc;
+        border-radius: pr(16px);
+        @include flex;
+        padding-left: pr(15px);
+        .icon {
+            font-size: pr(16px);
+        }
+        input {
+            flex: 1;
+            @include num(100%, 100%);
+            font-size: pr(16px);
+            padding-left: pr(150px);
+        }
+    }
+}
+
+section {
+    flex: 1;
+    @include num(100%, 100%);
+    overflow: hidden;
+    position: relative;
+    main {
+        width: 100%;
+        height: 100%;
+        .m-cont {
+            width: 100%;
+            .m-tit {
+                @include num(100%, pr(40px));
+                @include flex;
+                padding: 0 pr(10px);
+                .m-tit-left {
+                    flex: 9;
+                    @include num(100%, 100%);
+                    overflow: hidden;
+                    height: 100%;
+                    ul {
+                        width: pr(700px);
+                        height: 100%;
+                        @include flex(flex-start);
+                        li {
+                            @include num(pr(50px), 100%);
+                            @include flex(center);
+                            flex-shrink: 0;
+                            margin-right: pr(10px);
+                        }
+                        li.active {
+                            border-bottom: 2px solid #FF65AD;
+                        }
+                    }
+                }
+                .m-tit-right {
+                    flex: 1;
+                    @include num(100%, 100%);
+                    @include flex(center);
+                    .icon {
+                        font-size: pr(16px);
+                    }
+                }
+            }
+            .m-banner {
+                @include num(100%, pr(486px/2));
+                margin-top: pr(5px);
+                img {
+                    @include num(100%, 100%);
+                }
+            }
+            .m-cont-tit {
+                padding: 0 pr(10px);
+                ul {
+                    @include flex;
+                    border-bottom: 1px solid #ccc;
+                    @include num(100%, pr(55px));
+                    li {
+                        flex: 1;
+                        @include flex(center);
+                        img {
+                            @include num(auto, pr(14px));
+                            margin-right: pr(5px);
+                        }
+                        span {
+                            font-size: pr(16px);
+                        }
+                    }
+                }
+            }
+            .m-nav-list {
+                @include num(100%, pr(234px/2));
+                @include flex;
+                padding: 0 pr(10px);
+                li {
+                    flex: 1;
+                    @include flex(center);
+                    flex-direction: column;
+                    img {
+                        @include num(pr(80px/2), auto);
+                        margin-bottom: pr(10px);
+                    }
+                    span {
+                        font-size: pr(12px);
+                    }
+                }
+            }
+        }
+        .m-cont-bann {
+            @include num(100%, auto);
+            img {
+                @include num(100%, auto);
+            }
+        }
+        .m-shop {
+            @include num(100%, auto);
+            padding: 0 pr(10px);
+            dl {
+                @include num(100%, pr(190px));
+                border-bottom: 1px solid #ccc;
+                @include flex;
+                dd {
+                    flex: 4;
+                    @include num(100%, 100%);
+                    @include flex(center);
+                    img {
+                        @include num(pr(150px), auto);
+                    }
+                }
+                dt {
+                    flex: 6;
+                    @include num(100%, 100%);
+                    @include flex;
+                    .m-shop-left {
+                        flex: 8;
+                        @include num(100%, 100%);
+                        @include flex;
+                        flex-direction: column;
+                        padding: pr(20px) 0;
+                        .m-shop-left-top {
+                            flex: 1;
+                            @include num(100%, 100%);
+                            h2 {
+                                font-size: pr(15px);
+                            }
+                            span {
+                                font-size: pr(14px);
+                                color: #ccc;
+                                margin-top: pr(10px);
+                            }
+                            img {
+                                @include num(auto, pr(18px));
+                                display: block;
+                                margin-top: pr(10px);
+                            }
+                        }
+                        .m-shop-left-bot {
+                            flex: 1;
+                            @include num(100%, 100%);
+                            @include flex(flex-end);
+                            flex-direction: column;
+                            align-items: flex-start;
+                            span {
+                                font-size: pr(12px);
+                                color: #FE4892;
+                            }
+                            div {
+                                em {
+                                    b {
+                                        color: #FEDD74;
+                                        font-size: pr(12px);
+                                        &:nth-child(2) {
+                                            font-size: pr(16px);
+                                        }
+                                    }
+                                }
+                                u {
+                                    padding: pr(2px) pr(1px);
+                                    background: #FEDD74;
+                                    color: #eee;
+                                    font-size: pr(10px);
+                                    margin-left: pr(8px);
+                                }
+                            }
+                        }
+                    }
+                    .m-shop-right {
+                        flex: 2;
+                        @include num(100%, 100%);
+                        @include flex(center);
+                        align-items: flex-end;
+                        .icon {
+                            @include cir(pr(33px));
+                            @include cen(pr(33px));
+                            background: #FE4892;
+                            color: #fff;
+                            font-size: pr(16px);
+                            margin-bottom: pr(30px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .typeMark {
+        @include num(100%, 100%);
+        background: rgba($color: #000000, $alpha: .5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        .mark-cont {
+            @include num(100%, 70%);
+            background: #fff;
+            overflow: hidden;
+            .mark-tit {
+                padding: 0 pr(10px) pr(10px) pr(10px);
+                @include flex;
+                border-bottom: 1px solid #ccc;
+                span {
+                    flex: 1;
+                    @include flex(center);
+                    font-size: pr(14px);
+                }
+                .icon {
+                    font-size: pr(14px);
+                }
+            }
+            .mark-type-list {
+                flex: 1;
+                @include num(100%, 100%);
+                @include flex;
+                flex-wrap: wrap;
+                li {
+                    @include num(30%, auto);
+                    @include flex(center);
+                    flex-direction: column;
+                    span {
+                        margin-top: pr(15px);
+                        font-size: pr(16px);
+                    }
+                    img {
+                        @include num(auto, pr(110px/2));
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    ul {
+        @include num(100%, pr(50px));
+        border-top: 1px solid #ccc;
+        @include flex;
+        padding: 0 pr(10px);
+        background: #FFFFFF;
+        li {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        li.active {
+            color: #FF65AD;
+        }
+    }
+}
